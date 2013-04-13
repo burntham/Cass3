@@ -1,9 +1,7 @@
-/* 
- * File:   main.cpp
- * Author: brunt
- *
- * Created on 08 April 2013, 10:01 PM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//13.04.2013
+//Driver
 
 #include <cstdlib>
 #include <iostream>
@@ -14,8 +12,6 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    
-    cout<<"test me";
     return 0;
 }
 
