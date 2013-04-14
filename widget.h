@@ -11,9 +11,15 @@ namespace brndan022
 {
     class widget
     {  
-    public:
-        virtual void render(std::ostream & os, int depth) =0;
+    protected:
+            void indent (std::ostream & os, int depth) {
+            for (int i = 0; i < depth; ++i) {
+                os << "  ";
+            }
+        }       
         
+    public:
+        virtual void render(std::ostream & os, int depth) =0;    
         virtual ~widget(){}
     };
 }

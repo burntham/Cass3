@@ -17,10 +17,11 @@ using namespace brndan022;
 
 
 int main(int argc, char** argv) {
-    window * win = new window;
+    window * win = new window("main");
     win->add_child(dynamic_cast<widget*>(new button("OK","pressed")));
     win->add_child(dynamic_cast<widget*>(new button("OK","pressed")));
     
+    win->render(cout,0);
     
     delete win;
     button::print_counts(cout,"button");

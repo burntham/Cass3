@@ -23,9 +23,7 @@ namespace brndan022 {
         }
         
         virtual void render(std::ostream & os, int depth){
-            for (int i=0; i <depth; ++i){
-                os<<" ";
-            }
+            indent(os,depth);
             os<<"Label \""<<text<<"\""<<std::endl;
         }
         
