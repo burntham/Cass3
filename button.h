@@ -11,11 +11,31 @@
 
 #include "widget.h"
 #include "container.h"
+#include "counter.h"
 
-namespace brndan022{
-   class button : widget, sjp::counter <button> {       
-    
-}; 
+namespace brndan022 {
+
+    class button : public widget, public sjp::counter <button>
+    {
+    private:
+        
+        std::string type;
+        std::string status;
+    public:
+        
+        button (std::string text_,std::string status_):type(text_), status(status_){
+            
+        }
+        
+       //Implement render
+       virtual void render(std::ostream & os, int depth){
+            std::cout<<"test case"<<std::endl;
+        };
+       
+       //destructor
+       virtual ~button(){}
+            
+    };
 }
 
 

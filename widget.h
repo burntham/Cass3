@@ -6,12 +6,13 @@
 #ifndef WIDGET_H
 #define	WIDGET_H
 
+#include <iostream>
 namespace brndan022
 {
     class widget
     {  
     public:
-        virtual void render(void) =0;
+        virtual void render(std::ostream & os, int depth) =0;
         
         virtual ~widget(){}
     };
