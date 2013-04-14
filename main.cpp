@@ -23,20 +23,22 @@ void f2(void){
 }
 
 int main(int argc, char** argv) {
-    f1(); 
+    f1();//demo a gooie gui
     
     cout<<endl;
     
-    f2();
+    f2();//demo a cooler gui
     
+    cout<<endl;
+    
+    //print some stuff for the marker to show it works...
     button::print_counts(cout,"button");
     menu_item::print_counts(cout,"menu Item");
     label::print_counts(cout,"Label");
     menu::print_counts(cout,"Menu");
     bag_layout::print_counts(cout,"Bag Layout");
     window::print_counts(cout,"window");
-    
-            
+   
     return 0;
 }
 

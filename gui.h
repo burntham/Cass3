@@ -1,9 +1,8 @@
-/* 
- * File:   gui.h
- * Author: BRuNT
- *
- * Created on 14 April 2013, 7:44 PM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//gui.h
+//This file handles the gui and gui2 classes
 
 #ifndef GUI_H
 #define	GUI_H
@@ -26,7 +25,7 @@ namespace brndan022
         window * Window;
         
         gui(){
-            std::cout<<"--Gui Open--"<<std::endl;
+            
             //create a bunch of stuff ( to be added to to baglayout)
             //was testing the whole dynamic casting thing... - didn't seem to need it
             widget * Label = dynamic_cast<widget*>(new label("Press OK to Conitinue"));
@@ -62,7 +61,8 @@ namespace brndan022
         };   
         
         void render(){
-            using namespace std;         
+            using namespace std;    
+            cout<<"--Gui Open--"<<endl;
             Window->render(cout,0);
         }
         
@@ -70,11 +70,7 @@ namespace brndan022
             delete Window;
             std::cout<<"--Gui Closed--"<<std::endl;
         };
-        
-    
     };
-    
-    
     class gui2
     {
         
@@ -104,24 +100,25 @@ namespace brndan022
             menu  * Men= new menu("Party Favours","Ctrl + Alt + Delete");
             Men->add_child(i1);Men->add_child(i2);Men->add_child(i3);Men->add_child(i4);
             
+            bag_layout *  bag2 = new bag_layout(10,100);
+            bag2->add_child(Men);
+            
             Window = new window("The Unknown");
+            Window->add_child(bag1);
+            Window->add_child(bag2);
         };   
         
         void render(){
-            using namespace std;         
+            using namespace std;  
+            cout<<"--Gui Open--"<<endl;
             Window->render(cout,0);
         }
         
         ~gui2(){
             delete Window;
+            std::cout<<"--Gui Closed--"<<std::endl;
         };
-        
-    
     };
-
 }
-
-
-
 #endif	/* GUI1_H */
 

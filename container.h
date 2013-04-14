@@ -1,3 +1,10 @@
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//container.h
+//This class handles the container (extends widget)
+
+
 #ifndef CONTAINER_H
 #define	CONTAINER_H
 #include "widget.h"

@@ -1,9 +1,8 @@
-/* 
- * File:   button.h
- * Author: BRuNT
- *
- * Created on 13 April 2013, 9:07 PM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//button.h
+//This class handles the button (extends widget)
 
 #ifndef BUTTON_H
 
@@ -35,10 +34,8 @@ namespace brndan022 {
        
        //destructor
        virtual ~button(){}
-            
+            //nothing needed here...
     };
 }
-
-
 #endif	/* BUTTON_H */
 

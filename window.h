@@ -1,9 +1,8 @@
-/* 
- * File:   window.h
- * Author: BRuNT
- *
- * Created on 14 April 2013, 1:21 AM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//window.h
+//This class handles window (extends container)
 
 #ifndef WINDOW_H
 #define	WINDOW_H
@@ -25,6 +24,7 @@ namespace brndan022 {
         window(std::string title_):container(),widget(), title(title_){            
         }
         
+        //render all the children
         virtual void render(std::ostream & os, int depth){
             using namespace std;
             container::indent(os,depth);
@@ -32,6 +32,7 @@ namespace brndan022 {
             renderContained(os, depth);
         }
         
+        //adopt a child -_- >> going holywood style!
         virtual void add_child(widget * newChild){
             children.push(newChild);
         }

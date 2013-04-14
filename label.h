@@ -1,9 +1,8 @@
-/* 
- * File:   label.h
- * Author: BRuNT
- *
- * Created on 14 April 2013, 1:18 AM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//label.h
+//This class handles bag label (extends widget)
 
 #ifndef LABEL_H
 #define	LABEL_H
@@ -19,16 +18,18 @@ namespace brndan022 {
         std::string text;
         
     public:
+        //constructs -0.o
         label(std::string text_):widget(),text(text_) {            
         }
         
+        //renders
         virtual void render(std::ostream & os, int depth){
             indent(os,depth);
             os<<"Label \""<<text<<"\""<<std::endl;
         }
         
         virtual ~label(){
-            
+            //nothing needed here
         }
     };
 }

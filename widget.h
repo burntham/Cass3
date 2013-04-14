@@ -12,6 +12,7 @@ namespace brndan022
     class widget
     {  
     protected:
+            //prints the indentation
             void indent(std::ostream & os, int depth) {
             for (int i = 0; i < depth; ++i) {
                 os << "  ";
@@ -19,6 +20,7 @@ namespace brndan022
         }       
         
     public:
+        //forceful implementation on derived functions
         virtual void render(std::ostream & os, int depth) =0;    
         virtual ~widget(){}
     };

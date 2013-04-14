@@ -1,9 +1,8 @@
-/* 
- * File:   menu_item.h
- * Author: BRuNT
- *
- * Created on 14 April 2013, 1:17 AM
- */
+//C++ Assignment 3
+//Daniel Burnham-King
+//2013/04/14
+//menu_item.h
+//This class handles menu items (extends widget)
 
 #ifndef MENU_ITEM_H
 #define	MENU_ITEM_H
@@ -19,10 +18,11 @@ namespace brndan022
         std::string shortC;
         
     public:
+        //constructs
         menu_item(std::string item_, std::string shortC_):widget(),item(item_),shortC(shortC_){
             
         }
-        
+        //renders
        virtual void render(std::ostream & os, int depth){
            indent(os,depth);
            std::cout<<"Menu item \""<<item<<"\" \""<<shortC<<"\""<<std::endl;
