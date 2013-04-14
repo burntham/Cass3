@@ -8,25 +8,38 @@
 #include "widget.h"
 #include "button.h"
 #include "window.h"
+#include "gui.h"
 
 using namespace std;
 using namespace brndan022;
-/*
- * 
- */
 
+void f1(void){
+    gui g1;
+    g1.render();
+}
+void f2(void){
+   gui2 g2; 
+   g2.render();
+}
 
 int main(int argc, char** argv) {
-    window * win = new window("main");
-    win->add_child(dynamic_cast<widget*>(new button("OK","pressed")));
-    win->add_child(dynamic_cast<widget*>(new button("OK","pressed")));
+    f1(); 
     
-    win->render(cout,0);
+    cout<<endl;
     
-    delete win;
+    f2();
+    
     button::print_counts(cout,"button");
-    window::print_counts(std::cout,"window");
+    menu_item::print_counts(cout,"menu Item");
+    label::print_counts(cout,"Label");
+    menu::print_counts(cout,"Menu");
+    bag_layout::print_counts(cout,"Bag Layout");
+    window::print_counts(cout,"window");
+    
             
     return 0;
 }
+
+
+
 

@@ -12,7 +12,7 @@ namespace brndan022
     class widget
     {  
     protected:
-            void indent (std::ostream & os, int depth) {
+            void indent(std::ostream & os, int depth) {
             for (int i = 0; i < depth; ++i) {
                 os << "  ";
             }

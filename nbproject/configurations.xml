@@ -22,7 +22,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>gui.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -58,8 +57,6 @@
       <item path="container.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="counter.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="gui.cpp" ex="false" tool="0" flavor2="0">
       </item>
       <item path="gui.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -104,8 +101,6 @@
       <item path="container.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="counter.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="gui.cpp" ex="false" tool="0" flavor2="0">
       </item>
       <item path="gui.h" ex="false" tool="3" flavor2="0">
       </item>

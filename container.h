@@ -1,10 +1,3 @@
-/* 
- * File:   container.h
- * Author: BRuNT
- *
- * Created on 14 April 2013, 1:20 AM
- */
-
 #ifndef CONTAINER_H
 #define	CONTAINER_H
 #include "widget.h"
@@ -12,14 +5,25 @@
 #include "counter.h"
 
 namespace brndan022
-
 {       
     //abstract class
     class container :public widget
     {   
     protected:
         //store a list of pointers to be killed later
-         std::stack<widget*> children;    
+         std::stack<widget*> children;
+         
+         void renderContained(std::ostream & os, int depth){
+             using namespace std;
+            //create a temporary stack of pointers for printing
+            stack<widget*> tempstack = children;            
+            //render children
+            while(!tempstack.empty()) {
+                //container::indent(os,depth);
+                tempstack.top()->render(os, depth + 1);
+                tempstack.pop();
+            }
+         }
    
     public:
         

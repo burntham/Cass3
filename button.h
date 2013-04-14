@@ -30,7 +30,7 @@ namespace brndan022 {
        //Implement render
        virtual void render(std::ostream & os, int depth){
             indent(os,depth);
-            std::cout<<"Button "<<"\""<<type<<" "<<status<<"\""<<std::endl;
+            std::cout<<"Button "<<"\""<<type<<"\" "<<status<<std::endl;
         };
        
        //destructor

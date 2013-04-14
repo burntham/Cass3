@@ -29,14 +29,7 @@ namespace brndan022 {
             using namespace std;
             container::indent(os,depth);
             cout<<"Window \""<<title<<"\""<<endl;
-            //create a temporary stack of pointers for printing
-            stack<widget*> tempstack = children;
-            container::indent(os,depth);
-            //render children
-            while(!tempstack.empty()) {
-                tempstack.top()->render(os, depth + 1);
-                tempstack.pop();
-            }
+            renderContained(os, depth);
         }
         
         virtual void add_child(widget * newChild){

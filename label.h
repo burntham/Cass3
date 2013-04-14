@@ -13,7 +13,7 @@
 
 namespace brndan022 {
 
-    class label : public widget, sjp::counter<label>
+    class label : public widget,public sjp::counter<label>
     {
     private:
         std::string text;
